@@ -1,13 +1,14 @@
 import React from 'react'
 import { StyleSheet, View, Text, Image } from 'react-native'
 import DetailsFilm from './filmItem/DetailsFilm'
+import { getImageFromApi } from '../API/TMDBApi'
 
 function FilmItem(props) {
         return (
             <View style={styles.main_container}>
                 <Image
                 style={styles.image}
-                source={{uri: "image"}}
+                source={{uri: getImageFromApi(props.film.poster_path)}}
                 />
 
                 <DetailsFilm film={props.film} />
