@@ -11,7 +11,10 @@ const screens = {
         }
     },
     FilmDetail: {
-        screen: FilmDetail
+        screen: FilmDetail,
+        navigationOptions : {
+            title: ''
+        }
     }
 }
 
