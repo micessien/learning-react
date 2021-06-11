@@ -1,6 +1,7 @@
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import Search from '../Components/Search';
+import FilmDetail from '../Components/FilmDetail';
 
 const screens = {
     Search: {
@@ -8,6 +9,9 @@ const screens = {
         navigationOptions : {
             title: 'Rechercher'
         }
+    },
+    FilmDetail: {
+        screen: FilmDetail
     }
 }
 
