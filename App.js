@@ -1,5 +1,7 @@
 import React from 'react';
 import { LogBox } from 'react-native';
+import { Provider } from 'react-redux'
+import Store from './Store/configureStore'
 // Components
 import Navigation from "./Navigation/Navigation";
 
@@ -11,6 +13,8 @@ export default function App() {
   // LogBox.ignoreAllLogs();
 
   return (
-    <Navigation />
+    <Provider store={Store}>
+      <Navigation />
+    </Provider>
   );
 }
