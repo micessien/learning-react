@@ -7,6 +7,7 @@ function DetailsFilm(props) {
     return (
         <View style={styles.content_container}>
             <View style={styles.header_container}>
+                {props.favoriteImage}
                 <Text style={styles.title_text}>{film.title}</Text>
                 <Text style={styles.vote_text}>{film.vote_average}</Text>
             </View>
