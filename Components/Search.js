@@ -3,7 +3,7 @@ import {StyleSheet, View, Button, TextInput, FlatList, Text, ActivityIndicator} 
 import FilmItem from './FilmItem'
 import FilmList from './FilmList'
 import { getFilmsFromApiWithSearchedText } from '../API/TMDBApi'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 
 class Search extends React.Component {
 
@@ -16,6 +16,7 @@ class Search extends React.Component {
             films: [],
             isLoading: false
         }
+        this._loadFilms = this._loadFilms.bind(this);
     }
 
     _loadFilms() {
@@ -80,8 +81,8 @@ class Search extends React.Component {
                     loadFilms={this._loadFilms} // _loadFilm charge les films suivants, ça concerne l'API, le component FilmList va juste appeler cette méthode quand l'utilisateur aura parcouru tous les films et c'est le component Search qui lui fournira les films suivants
                     page={this.page}
                     totalPages={this.totalPages} // les infos page et totalPages vont être utile, côté component FilmList, pour ne pas déclencher l'évènement pour charger plus de film si on a atteint la dernière page
+                    favoriteList={false} // Ici j'ai simplement ajouté un booléen à false pour indiquer qu'on n'est pas dans le cas de l'affichage de la liste des films favoris. Et ainsi pouvoir déclencher le chargement de plus de films lorsque l'utilisateur scrolle.
                 />
-
                 {this._displayLoading()}
             </View>
         )
