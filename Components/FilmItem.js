@@ -1,6 +1,8 @@
 import React from 'react'
 import { StyleSheet, View, Text, Image, TouchableOpacity, Animated, Dimensions } from 'react-native'
+// Components
 import DetailsFilm from './filmItem/DetailsFilm'
+import FadeIn from '../Animations/FadeIn'
 import { getImageFromApi } from '../API/TMDBApi'
 
 class FilmItem extends React.Component {
@@ -16,8 +18,7 @@ class FilmItem extends React.Component {
         this.state.positionLeft,
         {
           toValue: 0,
-          duration: 500,
-          useNativeDriver: true, // <-- Add this
+          // useNativeDriver: true, // <-- Add this
         }).start()
     }
 
@@ -37,7 +38,7 @@ class FilmItem extends React.Component {
       const { film, displayDetailForFilm } = this.props;
 
       return (
-        <Animated.View style={{left: this.state.positionLeft}}>
+        <FadeIn>
           <TouchableOpacity
             onPress={() => displayDetailForFilm(film.id)}
             style={styles.main_container}>
@@ -48,7 +49,7 @@ class FilmItem extends React.Component {
 
               <DetailsFilm favoriteImage={this._displayFavoriteImage()} film={film} />
           </TouchableOpacity>
-        </Animated.View>
+        </FadeIn>
       )
     }
 }
