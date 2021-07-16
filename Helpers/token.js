@@ -1,1 +1,0 @@
-export default token = '317949a0c40fe34154efbff0be896f06';
