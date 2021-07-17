@@ -1,0 +1,19 @@
+{
+    "extends": [
+        "airbnb",
+        "prettier",
+        "plugin:react/recommended"
+    ],
+    "plugins": [
+        "prettier"
+    ],
+    "rules": {
+        "no-unused-vars": "warn",
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/destructuring-assignment": [<enabled>, "always", { "ignoreClassFields": <boolean> }],
+        "semi": [
+            "error",
+            "always"
+        ]
+    }
+}

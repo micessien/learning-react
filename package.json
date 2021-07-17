@@ -6,16 +6,15 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "test": "jest",
-    "lint": "eslint ."
+    "test": "jest"
   },
   "dependencies": {
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "react-native": "0.64.2",
     "@react-native-community/masked-view": "0.1.10",
     "moment": "^2.29.1",
     "numeral": "^2.0.6",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-native": "0.64.2",
     "react-native-config": "^1.4.2",
     "react-native-gesture-handler": "~1.10.2",
     "react-native-reanimated": "~2.2.0",
@@ -31,11 +30,20 @@
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/runtime": "^7.14.6",
-    "@react-native-community/eslint-config": "^3.0.0",
     "babel-jest": "^27.0.6",
-    "eslint": "^7.30.0",
+    "eslint": "7.2.0",
+    "eslint-config-airbnb": "18.2.1",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "7.21.5",
+    "eslint-plugin-react-hooks": "1.7.0",
     "jest": "^27.0.6",
     "metro-react-native-babel-preset": "^0.66.1",
+    "prettier": "^2.3.2",
     "react-test-renderer": "17.0.1"
   },
   "jest": {
